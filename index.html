@@ -1,12 +1,108 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!doctype html>
+<html>
 <head>
 <title>OpenPGP.js</title>
+<style>
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    font: 0.86em/120% Tahoma, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-size: medium;
+  font-weight: normal;
+  margin:0;
+  padding:0;
+}
+
+html {
+    background:url("http://www.gpgtools.org/images/bg.jpg") #eee;
+}
+body {
+  color:#333;
+  background:transparent;
+}
+
+.block {
+    margin:0 auto;
+    margin-top:1em;
+    margin-bottom:1em;
+    padding:.5em;
+    max-width:70em;
+
+    background:#fff;
+    -webkit-box-shadow: 0px 2px 5px #aaa;
+    -moz-box-shadow: 0px 2px 5px #aaa;
+    box-shadow: 0px 2px 5px #aaa;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #ccc;
+}
+
+
+#title {
+  background:#369;
+  color:#eee;
+  margin:0;
+  padding:.5em;
+}
+
+
+
+a:hover, a:active { outline: none; }
+a, a:active, a:visited { color: #607890; text-decoration:none;}
+a:hover { color: #036; }
+</style>
 </head>
 <body>
+<div id="title">
 <h1>OpenPGP.js</h1>
+<p>OpenPGP JavaScript implementation. Under construction (Nov. 2011).</p>
+</div>
+<div class="block">
+<h2>Links</h2>
+<ul>
+<li><a href="http://list.openpgpjs.org">Mailinglist</a>
+<li><a href="http://tickets.openpgpjs.org">Tickets</a>
+<li><a href="http://src.openpgpjs.org">Sources</a>
+<li><a href="http://docs.openpgpjs.org">Documentation</a>
+</ul>
+</div>
 
-<p>19th of November 2011: Nothing yet.</p>
+<div class="block">
+<h2>Overview</h2>
+<p><img style="width:90%; max-width:70em;" src="images/overview.png" alt="OpenPGP.js overview" /></p>
+</div>
+
+<!-- start: stats -->
+<script type="text/javascript">
+var _paq = _paq || [];
+(function(){
+    var u=(("https:" == document.location.protocol) ? "https://stat.openpgpjs.org/" : "http://stat.openpgpjs.org/");
+    _paq.push(['setSiteId', 1]);
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    _paq.push(['setDownloadExtensions', 'dmg|zip|pkg|sig']);
+    _paq.push(['setDownloadClasses', 'piwik_download']);
+    _paq.push(['setDomains', ['*.openpgpjs.org', 'github.com']]);
+    var d=document,
+        g=d.createElement('script'),
+        s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript';
+        g.defer=true;
+        g.async=true;
+        g.src=u+'piwik.js';
+        s.parentNode.insertBefore(g,s);
+})();</script>
+<noscript>
+<p><img height="1" width="1" src="http://stat.openpgpjs.org/piwik/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" /></p>
+</noscript>
+<!-- end: stats -->
+
 </body>
 </html>
