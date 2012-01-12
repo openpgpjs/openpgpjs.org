@@ -52,6 +52,9 @@ h1 {
   margin:0;
   padding:.5em;
   border-bottom:1px solid black;
+  -webkit-box-shadow: 0px 5px 5px #aaa;
+  -moz-box-shadow: 0px 5px 5px #aaa;
+  box-shadow: 0px 5px 5px #aaa;
 }
 
 #browsers {
