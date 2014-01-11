@@ -1,130 +1,21 @@
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">	
+<meta name="description" content="The OpenPGP.js project aims to provide an Open Source OpenPGP library in JavaScript." />
 <title>OpenPGP.js | Encrypted Contact Form</title>
-<style type="text/css">
-html,body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	font: 0.86em/120% Tahoma, Arial, sans-serif;
-	color: #333;
-	background: transparent;
-}
-
-html {
-	background: #eee;
-}
-
-a:hover,a:active {
-	outline: none;
-}
-
-a,a:active,a:visited {
-	color: #607890;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #036;
-}
-
-h1,h2,h3 {
-	font-size: medium;
-	font-weight: normal;
-	margin: 0;
-	padding: .5em;
-}
-
-p {
-	padding-left: 1.5em;
-}
-
-h1 {
-	font-size: xx-large;
-}
-
-.block {
-	margin: 0 auto;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	padding: .5em;
-	max-width: 70em;
-	background: #fff;
-	-webkit-box-shadow: 0px 2px 5px #aaa;
-	-moz-box-shadow: 0px 2px 5px #aaa;
-	box-shadow: 0px 2px 5px #aaa;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	border: 1px solid #ccc;
-}
-
-#title {
-	background: #369;
-	color: #eee;
-	margin: 0;
-	padding: .5em;
-	border-bottom: 1px solid black;
-	-webkit-box-shadow: 0px 5px 5px #aaa;
-	-moz-box-shadow: 0px 5px 5px #aaa;
-	box-shadow: 0px 5px 5px #aaa;
-}
-
-#browsers {
-	width: 90%;
-	margin: 0 auto;
-}
-
-.logo {
-	height: 8em;
-	width: 8em;
-}
-
-input:invalid,textarea:invalid {
-	border-radius: 1px;
-	-moz-box-shadow: 0px 0px 5px red;
-	-webkit-box-shadow: 0px 0px 5px red;
-	box-shadow: 0px 0px 5px red;
-}
-
-input,textarea {
-	width: 15em;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	background-color: white;
-	color: #666;
-	border: 1px solid #C4C4C4;
-	border-right: 1px solid #E9E9E9;
-	border-bottom: 1px solid #E9E9E9;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-
-#submitbutton {
-	background-color: #333;
-	color: #fff;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
-
-textarea {
-	width: 40em;
-	height: 5em;
-	max-width: 90%;
-}
-</style>
+<link rel="stylesheet" media="all" href="./css/style.css" type="text/css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
-	<div id="title">
+	<header id="title">
+        <img src="images/icon_openpgpjs.png" style="float:left;" alt="OpenPGP.js Logo" title="OpenPGP.js" />
 		<h1>OpenPGP.js | Encrypted Contact Form</h1>
-		<p>Please feel free to provide any kind of feedback.</p>
-	</div>
-	<div class="block">
+		<p>Messages sent from this form will be encrypted using OpenPGP.js.</p>
+	</header>
+	<p><br /><br /></p>
+	<section class="block">
 		<h2>Send us an encrypted message</h2>
 		<form action="#" method="post" onsubmit="return encrypt();"
 			name="submitform" id="submitform">
@@ -136,8 +27,8 @@ textarea {
 			</ul>
 			<input type="submit" name="submitbutton" id="submitbutton" />
 		</form>
-	</div>
-	<div class="block">
+	</section>
+	<section class="block">
 		<h2>Our public key</h2>
 		<pre id="pubkey">
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -178,7 +69,7 @@ z8jl9UymAkoTcsVWRVr5PKR0zsCxaNV3w5hv6j12+US7mEWe2kuD
 =Lx12
 -----END PGP PUBLIC KEY BLOCK-----
    </pre>
-	</div>
+	</section>
 	<script
 		src="https://github.com/openpgpjs/openpgpjs/releases/download/v0.2.0/openpgp.min.js"
 		type="text/javascript"></script>
