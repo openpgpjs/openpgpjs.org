@@ -1,3 +1,0 @@
-[submodule "openpgpjs"]
-	path = openpgpjs
-	url = git://github.com/openpgpjs/openpgpjs.git
