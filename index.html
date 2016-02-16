@@ -1,171 +1,178 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="description" content="The OpenPGP.js project aims to provide an Open Source OpenPGP library in JavaScript." />
-<title>OpenPGP.js | OpenPGP JavaScript Implementation</title>
-<link rel="stylesheet" media="all" href="./css/style.css" type="text/css">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-</head>
-<body>
-<header id="title">
-<img src="images/icon_openpgpjs.png" style="float:left;" alt="OpenPGP.js Logo" title="OpenPGP.js" />
-<h1>OpenPGP.js</h1>
-<p>OpenPGP JavaScript Implementation.</p>
-</header>
-<p><br /><br /></p>
-<section class="block">
-<h2>Abstract</h2>
-<p>
-This project aims to provide an Open Source OpenPGP library in JavaScript so it can be used on virtually every device.
-Instead of other implementations that are aimed at using native code, OpenPGP.js is meant to bypass this requirement (i.e. people will not have to install gpg on their machines in order to use the library).
-The idea is to implement all the needed OpenPGP functionality in a JavaScript library that can be reused in other projects that provide browser extensions or server applications.
-It should allow you to sign, encrypt, decrypt, and verify any kind of text - in particular e-mails - as well as managing keys.
-</p>
-</section>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="The OpenPGP.js project aims to provide an Open Source OpenPGP library in JavaScript." />
+    <title>OpenPGP.js | OpenPGP JavaScript Implementation</title>
+    <link rel="stylesheet" media="all" href="./css/style.css" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header id="title">
+      <img src="images/icon_openpgpjs.png" style="float:left;" alt="OpenPGP.js Logo" title="OpenPGP.js" />
+      <h1>OpenPGP.js</h1>
+      <p>OpenPGP JavaScript Implementation.</p>
+    </header>
+    <p><br /><br /></p>
+    <section class="block">
+      <h2>Abstract</h2>
+      <p>
+      This project aims to provide an Open Source OpenPGP library in JavaScript so it can be used on virtually every device.
+      Instead of other implementations that are aimed at using native code, OpenPGP.js is meant to bypass this requirement (i.e. people will not have to install gpg on their machines in order to use the library).
+      The idea is to implement all the needed OpenPGP functionality in a JavaScript library that can be reused in other projects that provide browser extensions or server applications.
+      It should allow you to sign, encrypt, decrypt, and verify any kind of text - in particular e-mails - as well as managing keys.
+      </p>
+    </section>
 
-<section class="block">
-<h2>Download / Contact</h2>
-<p>
-<a href="https://github.com/openpgpjs/openpgpjs/blob/master/README.md#getting-started" title="Download OpenPGP.js">
-  <img class="logo" id="logo-jslib" alt="js logo" title="Download OpenPGP.js" src="./images/logo_js.png">
-</a>
-<a href="http://list.openpgpjs.org" title="Mailinglist">
-  <img class="logo" id="logo-mail" alt="mailinglist" title="Mailinglist" src="./images/mail.png">
-</a>
-<a href="http://twitter.com/openpgpjs" title="Twitter">
-  <img class="logo" id="logo-twitter" alt="twitter" title="Twitter" src="./images/twitter.png">
-</a>
-<a href="./contact.html" title="Simple HTML5 Contact Form Example">
-    <img class="logo" id="logo-html5" alt="html5 logo" title="Simple HTML5 Contact Form Example" src="./images/logo_html5.png">
-</a>
-</p>
-</section>
+    <section class="block">
+      <h2>Download / Contact</h2>
+      <div class="logo-list">
+        <a href="https://github.com/openpgpjs/openpgpjs/blob/master/README.md#getting-started" title="Download OpenPGP.js">
+          <img class="logo" id="logo-jslib" alt="js logo" title="Download OpenPGP.js" src="./images/logo_js.png">
+        </a>
+        <a href="http://list.openpgpjs.org" title="Mailinglist">
+          <img class="logo" id="logo-mail" alt="mailinglist" title="Mailinglist" src="./images/mail.png">
+        </a>
+        <a href="http://twitter.com/openpgpjs" title="Twitter">
+          <img class="logo" id="logo-twitter" alt="twitter" title="Twitter" src="./images/twitter.png">
+        </a>
+        <a href="./contact.html" title="Simple HTML5 Contact Form Example">
+            <img class="logo" id="logo-html5" alt="html5 logo" title="Simple HTML5 Contact Form Example" src="./images/logo_html5.png">
+        </a>
+      </div>
+    </section>
 
-<section class="block">
-<h2>Support Us</h2>
-<h3>Donate Code</h3>
-<div>
-<a href="https://github.com/openpgpjs/openpgpjs" title="GitHub">
-  <img class="logo" id="logo-github" alt="github" title="GitHub" src="./images/octocat.png">
-</a>
-</div>
-<br>
-<h3>Donate Money</h3>
-<ul id="donate">
-<li><a href="https://gum.co/openpgpjs"><img src="images/icon_gumroad.png" alt="gumroad" title="Support OpenPGP.js"/></a></li>
-<li>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style='margin: 0; padding: 0; display:inline!important;'>
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="donations@openpgpjs.org">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="item_name" value="OpenPGP.js">
-<input type="hidden" name="item_number" value="openpgpjs">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="currency_code" value="EUR">
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-<input type="image" src="images/icon_paypal.png" name="submit" alt="PayPal - The safer, easier way to pay online!" style="height:26px; width:43px; border:0px; display:inline;" >
-<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" style="border:0px;">
-</form>
-</li>
-</ul>
-<h4>Our beloved supporters (so far):</h4>
-<div>
-<ul id="sponsors">
-<li>Darren Leno
-<li>Paul M. Furley
-<li>James Morgan
-<li>Jack Glazko
-<li>Tropical Health Foods, LLC
-<li>Dominik Wujastyk
-<li>Lasse Lukkari
-<li>Fernando Muñoz
-<li>Michael Morisy
-<li>Patrick Schütz
-</ul>
-</div>
-</section>
+    <section class="block">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="https://github.com/openpgpjs/openpgpjs">Source code</a>
+        <li><a href="https://github.com/openpgpjs/openpgpjs/blob/master/README.md#getting-started">Getting started</a>
+        <li><a href="openpgpjs/doc/">API documentation</a>
+        <li><a href="https://github.com/openpgpjs/openpgpjs/issues">Issues</a>
+        <li><a href="https://github.com/openpgpjs/openpgpjs/wiki">Wiki</a>
+        <li><a href="http://www.mail-archive.com/list@openpgpjs.org/info.html">Mailinglist archive</a>
+      </ul>
+    </section>
 
-<section class="block">
-<h2>Further Links</h2>
-<ul>
-<li><a href="http://www.mail-archive.com/list@openpgpjs.org/info.html">Mailinglist Archive</a>
-<li><a href="openpgpjs/doc/">API Documentation</a>
-<li><a href="https://github.com/openpgpjs/openpgpjs/wiki">Wiki</a>
-<li><a href="https://github.com/openpgpjs/openpgpjs/issues">Tickets</a>
-</ul>
-</section>
+    <section class="block">
+      <h2>Support us</h2>
+      <h3>Donate code</h3>
+      <div style="padding-left:1em">
+        <a href="https://github.com/openpgpjs/openpgpjs" title="GitHub">
+          <img class="logo" id="logo-github" alt="github" title="GitHub" src="./images/octocat.png">
+        </a>
+      </div>
+      <br>
+      <h3>Donate money</h3>
+      <ul id="donate" style="padding-left:1em">
+        <li><a href="https://gum.co/openpgpjs"><img src="images/icon_gumroad.png" alt="gumroad" title="Support OpenPGP.js"/></a></li>
+        <li>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style='margin: 0; padding: 0; display:inline!important;'>
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="donations@openpgpjs.org">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="OpenPGP.js">
+            <input type="hidden" name="item_number" value="openpgpjs">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="currency_code" value="EUR">
+            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+            <input type="image" src="images/icon_paypal.png" name="submit" alt="PayPal - The safer, easier way to pay online!" style="height:26px; width:43px; border:0px; display:inline;" >
+            <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" style="border:0px;">
+          </form>
+        </li>
+      </ul>
+    </section>
 
-<section class="block">
-<h2>Who is using OpenPGP.js</h2>
-<a href="https://chrome.google.com/webstore/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba" title="Google Chrome Extension Mymail-Crypt">
-  <img class="logo" id="logo-chrome-mymail" alt="chrome logo" title="Google Chrome Extension Mymail-Crypt" src="./images/logo_chrome.png">
-</a>
+    <section class="block">
+      <h2>Supporters</h2>
+      <h3>Gold</h3>
+      <div class="logo-list" style="margin-top:0">
+        <a href="https://www.globaleaks.org" title="Globaleaks" target="_blank">
+          <img style="width:5em; margin-bottom:0.25em; margin-right:1em;" id="logo-globaleaks" alt="globaleaks logo" title="Globaleaks" src="./images/logo_globaleaks.png">
+        </a>
+        <a href="https://hoodiecrow.com" title="Hoodiecrow" target="_blank">
+          <img style="width:6em; margin-bottom:-0.5em; margin-right:1em;" id="logo-hoodiecrow" alt="hoodiecrow logo" title="Hoodiecrow" src="./images/logo_hoodiecrow.png">
+        </a>
+        <a href="https://www.mailvelope.com" title="Mailvelope" target="_blank">
+          <img class="logo" id="logo-mailvelope" alt="mailvelope logo" title="Mailvelope" src="./images/logo_mailvelope.png">
+        </a>
+        <a href="https://protonmail.com/" title="ProtonMail" target="_blank">
+          <img style="width:7em; margin-bottom:-1em; margin-right:1em; " id="logo-protonmail" alt="protonmail logo" title="ProtonMail" src="./images/logo_protonmail.png">
+        </a>
+      </div>
 
-<a href="https://chrome.google.com/webstore/detail/mailvelope/kajibbejlbohfaggdiogboambcijhkke" title="Google Chrome Extension Mailvelope">
-  <img class="logo" id="logo-chrome-mailvelope" alt="chrome logo" title="Google Chrome Extension Mailvelope" src="./images/logo_chrome.png">
-</a>
+      <h3 style="padding-bottom:0.5em">Silver (donations)</h3>
+      <div>
+        <ul id="sponsors">
+          <li>Darren Leno
+          <li>Paul M. Furley
+          <li>James Morgan
+          <li>Jack Glazko
+          <li>Tropical Health Foods, LLC
+          <li>Dominik Wujastyk
+          <li>Lasse Lukkari
+          <li>Fernando Muñoz
+          <li>Michael Morisy
+          <li>Patrick Schütz
+        </ul>
+      </div>
+    </section>
 
-<a href="https://github.com/qnrq/rc_openpgpjs/" title="Roundcube Plugin">
-  <img class="logo" id="logo-roundcube" alt="roundcube logo" title="Roundcube Plugin" src="./images/logo_roundcube.png">
-</a>
-<a href="https://whiteout.io" title="Whiteout Mail">
-  <img class="logo" id="logo-whiteout" alt="whiteout logo" title="Whiteout Mail" src="./images/logo_whiteout.png">
-</a>
-<a href="http://www.openudc.org/" title="Universal Digital Currencies">
-  <img class="logo" id="logo-udc" alt="udc logo" title="Universal Digital Currencies" src="./images/logo_openudc.png">
-</a>
-<a href="https://encrypt.to" title="Encrypt To">
-  <img class="logo" id="logo-encrypto" alt="encrypto logo" title="encrypt.to uses OpenPGP.js to encrypt messages and send via Rails backend" src="./images/logo_encrypto.png">
-</a>
+    <section class="block">
+      <h2>Who else is using OpenPGP.js</h2>
+      <div class="logo-list">
+        <a href="https://chrome.google.com/webstore/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba" title="Google Chrome Extension Mymail-Crypt" target="_blank">
+          <img class="logo" id="logo-chrome-mymail" alt="chrome logo" title="Google Chrome Extension Mymail-Crypt" src="./images/logo_chrome.png">
+        </a>
+        <a href="https://github.com/qnrq/rc_openpgpjs/" title="Roundcube Plugin" target="_blank">
+          <img class="logo" id="logo-roundcube" alt="roundcube logo" title="Roundcube Plugin" src="./images/logo_roundcube.png">
+        </a>
+        <a href="http://www.openudc.org/" title="Universal Digital Currencies" target="_blank">
+          <img class="logo" id="logo-udc" alt="udc logo" title="Universal Digital Currencies" src="./images/logo_openudc.png">
+        </a>
+        <a href="https://encrypt.to" title="Encrypt To" target="_blank">
+          <img class="logo" id="logo-encrypto" alt="encrypto logo" title="encrypt.to uses OpenPGP.js to encrypt messages and send via Rails backend" src="./images/logo_encrypto.png">
+        </a>
+        <a href="http://pawelgorny.com/PGpgp/" title="PGpgp" target="_blank">
+          <img class="logo" id="logo-pgpgp" alt="PGpgp logo" title="PGpgp offers encryption/decryption of the messages using PGP on a BlackBerry" src="./images/logo_pgpgp.png">
+        </a>
+        <a href="https://chrome.google.com/webstore/detail/pgp-anywhere/cdlcdnmhcodhagbmljapgbjdimjckilb" title="PGP Anywhere" target="_blank">
+          <img class="logo" id="logo-pgpanywhere" alt="PGP Anywhere" title="Encrypt and decrypt PGP on the go" src="./images/logo_pgpanywhere.png">
+        </a>
+      </div>
+    </section>
 
-<a href="http://pawelgorny.com/PGpgp/" title="PGpgp">
-  <img class="logo" id="logo-pgpgp" alt="PGpgp logo" title="PGpgp offers encryption/decryption of the messages using PGP on a BlackBerry" src="./images/logo_pgpgp.png">
-</a>
+    <section class="block">
+      <h2>Architecture</h2>
+      <p><img style="width:90%; max-width:70em;" src="images/overview.png" alt="OpenPGP.js overview" /></p>
+    </section>
 
-<a href="https://chrome.google.com/webstore/detail/pgp-anywhere/cdlcdnmhcodhagbmljapgbjdimjckilb" title="PGP Anywhere">
-  <img class="logo" id="logo-pgpanywhere" alt="PGP Anywhere" title="Encrypt and decrypt PGP on the go" src="./images/logo_pgpanywhere.png">
-</a>
-
-<!--
-<img class="logo" id="logo-firefox" alt="firefox logo" title="browser extension not ready yet" src="./images/logo_firefox.png">
-<img class="logo" id="logo-safari" alt="safari logo" title="browser extension not ready yet" src="./images/logo_safari.png">
-<img class="logo" id="logo-opera" alt="opera logo" title="browser extension not ready yet" src="./images/logo_opera.png">
-<img class="logo" id="logo-ie" alt="ie logo" title="browser extension not ready yet" src="./images/logo_ie.png">
--->
-</section>
-
-<section class="block">
-<h2>Architecture</h2>
-<p><img style="width:90%; max-width:70em;" src="images/overview.png" alt="OpenPGP.js overview" /></p>
-</section>
-
-<!-- start: stats -->
-<script type="text/javascript">
-var _paq = _paq || [];
-(function(){
-    var u=(("https:" == document.location.protocol) ? "https://stat.openpgpjs.org/" : "http://stat.openpgpjs.org/");
-    _paq.push(['setSiteId', 1]);
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    _paq.push(['setDownloadExtensions', 'dmg|zip|pkg|sig']);
-    _paq.push(['setDownloadClasses', 'piwik_download']);
-    _paq.push(['setDomains', ['*.openpgpjs.org', 'github.com']]);
-    var d=document,
-        g=d.createElement('script'),
-        s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript';
-        g.defer=true;
-        g.async=true;
-        g.src=u+'piwik.js';
-        s.parentNode.insertBefore(g,s);
-})();</script>
-<noscript>
-<p><img height="1" width="1" src="http://stat.openpgpjs.org/piwik/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" /></p>
-</noscript>
-<!-- end: stats -->
-<script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
-</body>
+    <!-- start: stats -->
+    <script type="text/javascript">
+    var _paq = _paq || [];
+    (function(){
+        var u=(("https:" == document.location.protocol) ? "https://stat.openpgpjs.org/" : "http://stat.openpgpjs.org/");
+        _paq.push(['setSiteId', 1]);
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        _paq.push(['setDownloadExtensions', 'dmg|zip|pkg|sig']);
+        _paq.push(['setDownloadClasses', 'piwik_download']);
+        _paq.push(['setDomains', ['*.openpgpjs.org', 'github.com']]);
+        var d=document,
+            g=d.createElement('script'),
+            s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript';
+            g.defer=true;
+            g.async=true;
+            g.src=u+'piwik.js';
+            s.parentNode.insertBefore(g,s);
+    })();</script>
+    <noscript>
+    <p><img height="1" width="1" src="http://stat.openpgpjs.org/piwik/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" /></p>
+    </noscript>
+    <!-- end: stats -->
+    <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+  </body>
 </html>

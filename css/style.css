@@ -73,11 +73,17 @@ h1 {
     margin:0 auto;
 }
 
+.logo-list {
+    padding-left:1.5em;
+    margin:1em 0;
+}
+
 .logo {
     height:5em;
     width:5em;
     margin-right:1em;
 }
+
 input:invalid,textarea:invalid {
 	border-radius: 1px;
 	-moz-box-shadow: 0px 0px 5px red;
