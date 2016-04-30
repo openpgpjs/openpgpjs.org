@@ -34,6 +34,10 @@ ul#donate, ul#sponsors {
     margin-left: .5em;
 }
 
+ul#donate li {
+  margin-bottom: 1em;
+}
+
 p {  padding-left:1.5em;}
 
 h1 {
@@ -82,27 +86,6 @@ h1 {
     height:5em;
     width:5em;
     margin-right:1em;
-}
-
-input:invalid,textarea:invalid {
-	border-radius: 1px;
-	-moz-box-shadow: 0px 0px 5px red;
-	-webkit-box-shadow: 0px 0px 5px red;
-	box-shadow: 0px 0px 5px red;
-}
-
-input,textarea {
-	width: 15em;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	background-color: white;
-	color: #666;
-	border: 1px solid #C4C4C4;
-	border-right: 1px solid #E9E9E9;
-	border-bottom: 1px solid #E9E9E9;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
 }
 
 #submitbutton {

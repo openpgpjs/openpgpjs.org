@@ -59,27 +59,23 @@
       <br>
       <h3>Donate money</h3>
       <ul id="donate" style="padding-left:1em">
-        <li><a href="https://gum.co/openpgpjs"><img src="images/icon_gumroad.png" alt="gumroad" title="Support OpenPGP.js"/></a></li>
         <li>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style='margin: 0; padding: 0; display:inline!important;'>
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="donations@openpgpjs.org">
-            <input type="hidden" name="lc" value="US">
-            <input type="hidden" name="item_name" value="OpenPGP.js">
-            <input type="hidden" name="item_number" value="openpgpjs">
-            <input type="hidden" name="no_note" value="0">
-            <input type="hidden" name="currency_code" value="EUR">
-            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-            <input type="image" src="images/icon_paypal.png" name="submit" alt="PayPal - The safer, easier way to pay online!" style="height:26px; width:43px; border:0px; display:inline;" >
-            <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" style="border:0px;">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="4Z6RK8W6UEJUG">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
           </form>
+        </li>
+        <li>
+          <label>Bitcoin wallet address:</label>
+          <strong>1CWYFEFySZKFSrCctfRJru8JaPY8RsxCtv</strong>
         </li>
       </ul>
     </section>
 
     <section class="block">
-      <h2>Supporters</h2>
-      <h3>Gold</h3>
+      <h2>Gold Members / Supporters</h2>
       <div class="logo-list" style="margin-top:0">
         <a href="https://www.globaleaks.org" title="Globaleaks" target="_blank">
           <img style="width:5em; margin-bottom:0.25em; margin-right:1em;" id="logo-globaleaks" alt="globaleaks logo" title="Globaleaks" src="./images/logo_globaleaks.png">
@@ -93,22 +89,6 @@
         <a href="https://protonmail.com/" title="ProtonMail" target="_blank">
           <img style="width:7em; margin-bottom:-1em; margin-right:1em; " id="logo-protonmail" alt="protonmail logo" title="ProtonMail" src="./images/logo_protonmail.png">
         </a>
-      </div>
-
-      <h3 style="padding-bottom:0.5em">Silver (donations)</h3>
-      <div>
-        <ul id="sponsors">
-          <li>Darren Leno
-          <li>Paul M. Furley
-          <li>James Morgan
-          <li>Jack Glazko
-          <li>Tropical Health Foods, LLC
-          <li>Dominik Wujastyk
-          <li>Lasse Lukkari
-          <li>Fernando Muñoz
-          <li>Michael Morisy
-          <li>Patrick Schütz
-        </ul>
       </div>
     </section>
 
@@ -140,7 +120,5 @@
       <h2>Architecture</h2>
       <p><img style="width:90%; max-width:70em;" src="images/overview.png" alt="OpenPGP.js overview" /></p>
     </section>
-
-    <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
   </body>
 </html>
