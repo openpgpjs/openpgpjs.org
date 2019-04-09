@@ -96,8 +96,38 @@ h1 {
 	border-radius: 5px;
 }
 
+header > div {
+	display: inline-block;
+	width: 24rem;
+}
+
+#eu-horizon {
+	float: right; 
+	width: 240px; 
+	margin: 1.1rem 0;
+}
+
 textarea {
 	width: 40em;
 	height: 5em;
 	max-width: 90%;
+}
+
+
+@media screen and (max-width: 660px) {
+  header > div img {
+    display: none;
+  }
+  header > div {
+    width: 14rem;
+  }
+  h1 {
+    font-size: large;
+  }
+  p {
+    padding: 0 .5rem;
+  }
+  .block {
+    margin: 1rem .5rem;
+  }
 }
