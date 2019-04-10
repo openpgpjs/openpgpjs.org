@@ -1,126 +1,104 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="The OpenPGP.js project aims to provide an Open Source OpenPGP library in JavaScript." />
-    <title>OpenPGP.js | OpenPGP JavaScript Implementation</title>
-    <link rel="stylesheet" media="all" href="./css/style.css" type="text/css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <header id="title">
-      <img src="images/logo-gdpr-eu-white.svg" id="eu-horizon" alt="This project is supported by the Horizon 2020 Framework Programme of the European Union">
-      <div>
-        <img src="images/icon_openpgpjs.png" style="float:left; width: 85px; margin-right: 1rem;" alt="OpenPGP.js Logo" title="OpenPGP.js" />
-        <h1>OpenPGP.js</h1>
-        <p>OpenPGP JavaScript Implementation.</p>
-      </div>
-    </header>
-    <p><br /><br /></p>
-    <section class="block">
-      <h2>Abstract</h2>
-      <p>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="The OpenPGP.js project aims to provide an Open Source OpenPGP library in JavaScript." />
+  <title>OpenPGP.js | OpenPGP JavaScript Implementation</title>
+  <link rel="stylesheet" media="all" href="./css/style.css" type="text/css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header id="title">
+    <img src="images/logo-gdpr-eu-white.svg" id="eu-horizon" alt="This project is supported by the Horizon 2020 Framework Programme of the European Union">
+    <div>
+      <img src="images/icon_openpgpjs.png" style="float:left; width: 85px; margin-right: 1rem;" alt="OpenPGP.js Logo" title="OpenPGP.js" />
+      <h1>OpenPGP.js</h1>
+      <p>OpenPGP JavaScript Implementation</p>
+    </div>
+  </header>
+  <section class="block">
+    <h2>About</h2>
+    <p>
       This project aims to provide an Open Source OpenPGP library in JavaScript so it can be used on virtually every device.
       Instead of other implementations that are aimed at using native code, OpenPGP.js is meant to bypass this requirement (i.e. people will not have to install gpg on their machines in order to use the library).
       The idea is to implement all the needed OpenPGP functionality in a JavaScript library that can be reused in other projects that provide browser extensions or server applications.
       It should allow you to sign, encrypt, decrypt, and verify any kind of text - in particular e-mails - as well as managing keys.
-      </p>
-    </section>
+    </p>
+    <p>This project is maintained by <a href="https://protonmail.com/blog/openpgpjs-email-encryption/" target="_blank">ProtonMail</a>.</p>
+  </section>
 
-    <section class="block">
-      <h2>Download / Contact</h2>
-      <div class="logo-list">
-        <a href="https://github.com/openpgpjs/openpgpjs/blob/master/README.md#getting-started" title="Download OpenPGP.js" target="_blank">
-          <img class="logo" id="logo-jslib" alt="js logo" title="Download OpenPGP.js" src="./images/logo_js.png">
-        </a>
-        <a href="https://twitter.com/openpgpjs" title="Twitter" target="_blank">
-          <img class="logo" id="logo-twitter" alt="twitter" title="Twitter" src="./images/twitter.png">
-        </a>
-      </div>
-    </section>
+  <section class="block">
+    <h2>Download</h2>
+    <div class="logo-list">
+      <a href="https://github.com/openpgpjs/openpgpjs/blob/master/README.md#getting-started" title="Download OpenPGP.js" target="_blank">
+        <img class="logo" id="logo-jslib" alt="js logo" title="Download OpenPGP.js" src="./images/logo_js.png">
+      </a>
+    </div>
+  </section>
 
-    <section class="block">
-      <h2>Resources</h2>
-      <ul>
-        <li><a href="https://github.com/openpgpjs/openpgpjs" target="_blank">Source code</a>
-        <li><a href="https://github.com/openpgpjs/openpgpjs/blob/master/README.md#getting-started" target="_blank">Getting started</a>
-        <li><a href="openpgpjs/doc/" target="_blank">API documentation</a>
-        <li><a href="https://github.com/openpgpjs/openpgpjs/issues" target="_blank">GitHub issues</a>
-        <li><a href="https://github.com/openpgpjs/openpgpjs/wiki" target="_blank">Wiki</a>
-      </ul>
-    </section>
+  <section class="block">
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="https://github.com/openpgpjs/openpgpjs" target="_blank">Source code</a></li>
+      <li><a href="https://github.com/openpgpjs/openpgpjs/blob/master/README.md#getting-started" target="_blank">Getting started</a></li>
+      <li><a href="openpgpjs/doc/" target="_blank">API documentation</a></li>
+      <li><a href="https://github.com/openpgpjs/openpgpjs/issues" target="_blank">GitHub issues</a></li>
+      <li><a href="https://github.com/openpgpjs/openpgpjs/wiki" target="_blank">Wiki</a></li>
+      <li><a href="https://twitter.com/openpgpjs" target="_blank">Twitter</a></li>
+    </ul>
+  </section>
 
-    <section class="block">
-      <h2>Support us</h2>
-      <h3>Donate code</h3>
-      <div style="padding-left:1em">
-        <a href="https://github.com/openpgpjs/openpgpjs" title="GitHub" target="_blank">
-          <img class="logo" id="logo-github" alt="github" title="GitHub" src="./images/octocat.png">
-        </a>
-      </div>
-      <br>
-      <h3>Donate money</h3>
-      <ul id="donate" style="padding-left:1em">
-        <li>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="4Z6RK8W6UEJUG">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-            <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
-          </form>
-        </li>
-      </ul>
-    </section>
+  <section class="block">
+    <h2>Gold Members / Supporters</h2>
+    <div class="logo-list">
+      <a href="https://protonmail.com/" title="ProtonMail" target="_blank">
+        <img id="logo-protonmail" alt="protonmail logo" title="ProtonMail" src="./images/logo_protonmail.png">
+        <span>ProtonMail</span>
+      </a>
+      <a href="https://www.globaleaks.org" title="Globaleaks" target="_blank">
+        <img id="logo-globaleaks" alt="globaleaks logo" title="Globaleaks" src="./images/logo_globaleaks.png">
+        <span>GlobaLeaks.org</span>
+      </a>
+      <a href="https://www.mailvelope.com" title="Mailvelope" target="_blank">
+        <img class="logo" id="logo-mailvelope" alt="mailvelope logo" title="Mailvelope" src="./images/logo_mailvelope.png">
+        <span>Mailvelope</span>
+      </a>
+    </div>
+  </section>
 
-    <section class="block">
-      <h2>Gold Members / Supporters</h2>
-      <div class="logo-list" style="margin-top:0">
-        <a href="https://www.globaleaks.org" title="Globaleaks" target="_blank">
-          <img style="width:5em; margin-bottom:0.25em; margin-right:1em;" id="logo-globaleaks" alt="globaleaks logo" title="Globaleaks" src="./images/logo_globaleaks.png">
-        </a>
-        <a href="https://hoodiecrow.com" title="Hoodiecrow" target="_blank">
-          <img style="width:6em; margin-bottom:-0.5em; margin-right:1em;" id="logo-hoodiecrow" alt="hoodiecrow logo" title="Hoodiecrow" src="./images/logo_hoodiecrow.png">
-        </a>
-        <a href="https://www.mailvelope.com" title="Mailvelope" target="_blank">
-          <img class="logo" id="logo-mailvelope" alt="mailvelope logo" title="Mailvelope" src="./images/logo_mailvelope.png">
-        </a>
-        <a href="https://protonmail.com/" title="ProtonMail" target="_blank">
-          <img style="width:7em; margin-bottom:-1em; margin-right:1em; " id="logo-protonmail" alt="protonmail logo" title="ProtonMail" src="./images/logo_protonmail.png">
-        </a>
-      </div>
-    </section>
+  <section class="block">
+    <h2>Who else is using OpenPGP.js</h2>
+    <div class="logo-list">
+      <a href="https://chrome.google.com/webstore/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba" title="Google Chrome Extension Mymail-Crypt" target="_blank">
+        <img class="logo" id="logo-chrome-mymail" alt="chrome logo" title="Google Chrome Extension Mymail-Crypt" src="./images/logo_chrome.png">
+        <span>Mymail-Crypt</span>
+      </a>
+      <a href="http://project.openudc.org/" title="Universal Digital Currencies" target="_blank">
+        <img class="logo" id="logo-udc" alt="udc logo" title="Universal Digital Currencies" src="./images/logo_openudc.png">
+        <span>UDC</span>
+      </a>
+      <a href="https://encrypt.to" title="Encrypt To" target="_blank">
+        <img class="logo" id="logo-encrypto" alt="encrypto logo" title="encrypt.to uses OpenPGP.js to encrypt messages and send via Rails backend" src="./images/logo_encrypto.png">
+        <span>Encrypt.to</span>
+      </a>
+      <a href="http://pawelgorny.com/PGpgp/" title="PGpgp" target="_blank">
+        <img class="logo" id="logo-pgpgp" alt="PGpgp logo" title="PGpgp offers encryption/decryption of the messages using PGP on a BlackBerry" src="./images/logo_pgpgp.png">
+        <span>PGpgp</span>
+      </a>
+      <a href="https://chrome.google.com/webstore/detail/pgp-anywhere/cdlcdnmhcodhagbmljapgbjdimjckilb" title="PGP Anywhere" target="_blank">
+        <img class="logo" id="logo-pgpanywhere" alt="PGP Anywhere" title="Encrypt and decrypt PGP on the go" src="./images/logo_pgpanywhere.png">
+        <span>PGP Anywhere</span>
+      </a>
+      <a href="https://www.passbolt.com" title="Passbolt" target="_blank">
+        <img class="logo" id="logo-passbolt" alt="Passbolt logo" title="Open source password manager for teams" src="./images/logo_passbolt.png">
+        <span>passbolt</span>
+      </a>
+    </div>
+  </section>
 
-    <section class="block">
-      <h2>Who else is using OpenPGP.js</h2>
-      <div class="logo-list">
-        <a href="https://chrome.google.com/webstore/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba" title="Google Chrome Extension Mymail-Crypt" target="_blank">
-          <img class="logo" id="logo-chrome-mymail" alt="chrome logo" title="Google Chrome Extension Mymail-Crypt" src="./images/logo_chrome.png">
-        </a>
-        <a href="https://github.com/qnrq/rc_openpgpjs/" title="Roundcube Plugin" target="_blank">
-          <img class="logo" id="logo-roundcube" alt="roundcube logo" title="Roundcube Plugin" src="./images/logo_roundcube.png">
-        </a>
-        <a href="http://project.openudc.org/" title="Universal Digital Currencies" target="_blank">
-          <img class="logo" id="logo-udc" alt="udc logo" title="Universal Digital Currencies" src="./images/logo_openudc.png">
-        </a>
-        <a href="https://encrypt.to" title="Encrypt To" target="_blank">
-          <img class="logo" id="logo-encrypto" alt="encrypto logo" title="encrypt.to uses OpenPGP.js to encrypt messages and send via Rails backend" src="./images/logo_encrypto.png">
-        </a>
-        <a href="http://pawelgorny.com/PGpgp/" title="PGpgp" target="_blank">
-          <img class="logo" id="logo-pgpgp" alt="PGpgp logo" title="PGpgp offers encryption/decryption of the messages using PGP on a BlackBerry" src="./images/logo_pgpgp.png">
-        </a>
-        <a href="https://chrome.google.com/webstore/detail/pgp-anywhere/cdlcdnmhcodhagbmljapgbjdimjckilb" title="PGP Anywhere" target="_blank">
-          <img class="logo" id="logo-pgpanywhere" alt="PGP Anywhere" title="Encrypt and decrypt PGP on the go" src="./images/logo_pgpanywhere.png">
-        </a>
-        <a href="https://www.passbolt.com" title="Passbolt" target="_blank">
-          <img class="logo" id="logo-passbolt" alt="Passbolt logo" title="Open source password manager for teams" src="./images/logo_passbolt.png">
-        </a>
-      </div>
-    </section>
-
-    <section class="block">
-      <h2>Architecture</h2>
-      <p><img style="width:90%; max-width:70em;" src="images/overview.png" alt="OpenPGP.js overview" /></p>
-    </section>
-  </body>
+  <section class="block">
+    <h2>Architecture</h2>
+    <p><img style="width:90%; max-width:70em;" src="images/overview.png" alt="OpenPGP.js overview" /></p>
+  </section>
+</body>
 </html>
