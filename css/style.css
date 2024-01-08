@@ -187,23 +187,6 @@ body {
   gap: 3rem;
 }
 
-.about-placeholder {
-  background-color: var(--color-indigo-300);
-}
-
-.about-placeholder-img {
-  font-weight: 600;
-  color: var(--color-indigo-100);
-  font-size: 3rem;
-  line-height: 1;
-  padding: 2rem;
-  margin-bottom: 1rem;
-}
-
-.image-text {
-  font-size: 0.9rem;
-}
-
 .supporters-section {
   background-color: var(--color-indigo-50);
   padding-top: 3rem;
