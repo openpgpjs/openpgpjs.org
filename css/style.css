@@ -197,6 +197,11 @@ body {
   font-size: 3rem;
   line-height: 1;
   padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.image-text {
+  font-size: 0.9rem;
 }
 
 .supporters-section {
