@@ -1,111 +1,424 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="The OpenPGP.js project aims to provide an Open Source OpenPGP library in JavaScript." />
-  <title>OpenPGP.js | OpenPGP JavaScript Implementation</title>
-  <link rel="stylesheet" media="all" href="./css/style.css" type="text/css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
-  <header id="title">
-    <img src="images/logo-gdpr-eu-white.svg" id="eu-horizon" alt="This project is supported by the Horizon 2020 Framework Programme of the European Union">
-    <div>
-      <img src="images/icon_openpgpjs.png" style="float:left; width: 85px; margin-right: 1rem;" alt="OpenPGP.js Logo" title="OpenPGP.js" />
-      <h1>OpenPGP.js</h1>
-      <p>OpenPGP JavaScript Implementation</p>
-    </div>
-  </header>
-  <section class="block">
-    <h2>About</h2>
-    <p>
-      This project aims to provide an Open Source OpenPGP library in JavaScript so it can be used on virtually every device.
-      Instead of other implementations that are aimed at using native code, OpenPGP.js is meant to bypass this requirement (i.e. people will not have to install gpg on their machines in order to use the library).
-      The idea is to implement all the needed OpenPGP functionality in a JavaScript library that can be reused in other projects that provide browser extensions or server applications.
-      It should allow you to sign, encrypt, decrypt, and verify any kind of text - in particular e-mails - as well as managing keys.
-    </p>
-    <p>This project is maintained by <a href="https://proton.me/blog/openpgpjs-email-encryption" target="_blank">Proton Mail</a>.</p>
-    <p>
-      Contacts:
-      <ul>
-        <li>To report security issues: <a href="mailto:security@openpgpjs.org">security@openpgpjs.org</a> (Please download our <a href=".well-known/openpgpkey/hu/t5s8ztdbon8yzntexy6oz5y48etqsnbb">PGP key</a>, either manually or using <a href="https://wiki.gnupg.org/WKD">WKD</a>)</li>
-        <li>For general inquiries: <a href="mailto:contact@openpgpjs.org">contact@openpgpjs.org</a> (<a href=".well-known/openpgpkey/hu/dj3498u4hyyarh35rkjfnghbjxug6b19">PGP key</a>)</li>
-      </ul>
-    </p>
-  </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenPGP.js</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#4f47e6" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="logo-openpgp">
+            <img
+              src="img/openpgpjs-logo.svg"
+              width="32"
+              height="32"
+              alt="OpenPGP.js Logo"
+            />
+            OpenPGP.js
+          </a>
+          <a
+            href="https://github.com/openpgpjs/openpgpjs"
+            target="_blank"
+            rel="noopener"
+            class="logo-github"
+          >
+            <svg
+              height="32"
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+              version="1.1"
+              width="32"
+              data-view-component="true"
+              class="octicon octicon-mark-github v-align-middle color-fg-default"
+            >
+              <path
+                d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"
+              ></path>
+            </svg>
+            <span class="sr-only">Github</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="intro-section">
+        <div class="container">
+          <div class="intro-content">
+            <h1 class="title-hero">OpenPGP JavaScript Implementation</h1>
+            <p class="intro-paragraph text-gray-500">
+              OpenPGP.js is an Open Source JavaScript library implementing the
+              OpenPGP standard for cryptographic operations, such as encrypting,
+              decrypting, signing and verifying messages across devices and
+              applications without requiring native code installation.
+            </p>
+            <div class="intro-button-group">
+              <a
+                href="https://github.com/openpgpjs/openpgpjs/blob/main/README.md#getting-started"
+                target="_blank"
+                class="primary-btn"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  version="1.1"
+                  width="16"
+                  height="16"
+                >
+                  <path
+                    d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"
+                  ></path>
+                </svg>
+                <span>Download</span>
+              </a>
+              <a
+                href="https://docs.openpgpjs.org/"
+                class="secondary-btn"
+                target="_blank"
+                >API Docs</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-section">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content">
+              <div>
+                <h2 class="title-medium">About OpenPGP</h2>
+                <p class="text-gray-500">
+                  This project aims to provide an Open Source OpenPGP library in
+                  JavaScript so it can be used on virtually every device.
+                  Instead of other implementations that are aimed at using
+                  native code, OpenPGP.js is meant to bypass this requirement
+                  (i.e. people will not have to install gpg on their machines in
+                  order to use the library). The idea is to implement all the
+                  needed OpenPGP functionality in a JavaScript library that can
+                  be reused in other projects that provide browser extensions or
+                  server applications. It should allow you to sign, encrypt,
+                  decrypt, and verify any kind of text - in particular e-mails -
+                  as well as managing keys.
+                </p>
+                <p class="text-gray-500">
+                  To fetch public keys, the
+                  <a
+                    href="https://github.com/openpgpjs/wkd-client"
+                    class="default-link"
+                    target="_blank"
+                    >WKD client</a
+                  >
+                  and/or
+                  <a
+                    href="https://github.com/openpgpjs/hkp-client"
+                    class="default-link"
+                    target="_blank"
+                    >HKP client</a
+                  >
+                  can be used. The latter can also be used to upload public keys
+                  to OpenPGP key servers.
+                </p>
+                <p class="text-gray-500">
+                  This project is maintained by
+                  <a
+                    href="https://proton.me/blog/openpgpjs-email-encryption"
+                    class="default-link"
+                    target="_blank"
+                    >Proton Mail</a
+                  >.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="img/overview.png"
+                  alt="overview"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="supporters-section">
+        <div class="container">
+          <div class="supporters-content">
+            <h2 class="title-medium">Supporters</h2>
+            <div class="supporters-container">
+              <a
+                href="https://proton.me/mail"
+                target="_blank"
+                title="Proton Mail"
+                class="supporter-link"
+                rel="noopener"
+                ><img
+                  src="img/logo_protonmail.svg"
+                  title="Proton Mail"
+                  alt="Proton Mail logo"
+                  width="64"
+                  height="64"
+                />
+                <p>Proton Mail</p></a
+              >
+              <a
+                href="https://www.sovereigntechfund.de/"
+                class="supporter-link"https://a.slack-edge.com/production-standard-emoji-assets/14.0/apple-medium/1fae1@2x.png
+                title="Sovereign Tech Fund"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="img/logo_stf.jpeg"
+                  title="Sovereign Tech Fund"
+                  alt="Sovereign Tech Fund logo"
+                  width="64"
+                  height="64"
+                />
+                <p>STF</p>
+              </a>
+            </div>
+            <h3 class="title-medium margin-top">
+              Who else is using OpenPGP.js
+            </h3>
+            <div class="supporters-logo-container">
+              <a
+                href="https://www.globaleaks.org/"
+                title="GlobaLeaks"
+                class="user-link"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  src="img/logo_globaleaks.svg"
+                  title="Globaleaks"
+                  alt="globaleaks logo"
+                  width="64"
+                  height="64"
+                />
+                <p>GlobaLeaks.org</p>
+              </a>
+              <a
+                href="https://mailvelope.com/en"
+                title="Mailvelope"
+                class="user-link"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  src="img/logo_mailvelope.svg"
+                  title="Mailvelope"
+                  alt="Mailvelope Logo"
+                  width="64"
+                  height="64"
+                />
+                <p>Mailvelope</p>
+              </a>
+              <a
+                href="https://flowcrypt.com/"
+                title="Flowcrypt"
+                class="user-link"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="img/logo_flowcrypt.jpg"
+                  title="PGP Encryption for Gmail"
+                  alt="Flowcrypt logo"
+                  width="64"
+                  height="64"
+                />
+                <p>FlowCrypt</p>
+              </a>
+              <a
+                href="https://chromewebstore.google.com/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba"
+                class="user-link"
+                title="Google Chrome Extension Mymail-Crypt"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="img/logo_mymail_crypt.jpg"
+                  title="Google Chrome Extension Mymail-Crypt"
+                  alt="Mymail Crypt logo"
+                  width="64"
+                  height="64"
+                />
+                <p>Mymail-Crypt</p>
+              </a>
+              <a
+                href="https://www.openudc.org/"
+                class="user-link"
+                title="Universal Digital Currencies"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="img/logo_openudc.png"
+                  title="Universal Digital Currencies"
+                  alt="OpenUDC logo"
+                  width="64"
+                  height="64"
+                />
+                <p>UDC</p>
+              </a>
+              <a
+                href="https://encrypt.to/"
+                class="user-link"
+                title="Encrypt To"
+                rel="noopener"
+                target="_blank"
+              >
+                <img
+                  src="img/logo_encrypto.png"
+                  title="Encrypt To"
+                  alt="encrypto logo"
+                  width="64"
+                  height="64"
+                />
+                <p>Encrypt.to</p>
+              </a>
 
-  <section class="block">
-    <h2>Download</h2>
-    <div class="logo-list">
-      <a href="https://github.com/openpgpjs/openpgpjs/blob/master/README.md#getting-started" title="Download OpenPGP.js" target="_blank">
-        <img class="logo" id="logo-jslib" alt="js logo" title="Download OpenPGP.js" src="./images/logo_js.png">
-      </a>
-    </div>
-  </section>
-
-  <section class="block">
-    <h2>Resources</h2>
-    <ul>
-      <li><a href="https://github.com/openpgpjs/openpgpjs" target="_blank">Source code</a></li>
-      <li><a href="https://github.com/openpgpjs/openpgpjs/blob/master/README.md#getting-started" target="_blank">Getting started</a></li>
-      <li><a href="https://docs.openpgpjs.org" target="_blank">API documentation</a></li>
-      <li><a href="https://github.com/openpgpjs/openpgpjs/issues" target="_blank">GitHub issues</a></li>
-      <li><a href="https://github.com/openpgpjs/openpgpjs/wiki" target="_blank">Wiki</a></li>
-      <li><a href="https://twitter.com/openpgpjs" target="_blank">Twitter</a></li>
-    </ul>
-  </section>
-
-  <section class="block">
-    <h2>Gold Members / Supporters</h2>
-    <div class="logo-list">
-      <a href="https://proton.me/mail" title="Proton Mail" target="_blank">
-        <img id="logo-proton-mail" alt="Proton Mail logo" title="Proton Mail" src="./images/logo_proton_mail.png">
-        <span>Proton Mail</span>
-      </a>
-      <a href="https://www.globaleaks.org" title="Globaleaks" target="_blank">
-        <img id="logo-globaleaks" alt="globaleaks logo" title="Globaleaks" src="./images/logo_globaleaks.png">
-        <span>GlobaLeaks.org</span>
-      </a>
-      <a href="https://www.mailvelope.com" title="Mailvelope" target="_blank">
-        <img class="logo" id="logo-mailvelope" alt="mailvelope logo" title="Mailvelope" src="./images/logo_mailvelope.png">
-        <span>Mailvelope</span>
-      </a>
-    </div>
-  </section>
-
-  <section class="block">
-    <h2>Who else is using OpenPGP.js</h2>
-    <div class="logo-list">
-      <a href="https://flowcrypt.com/" title="FlowCrypt" target="_blank">
-        <img class="logo" id="logo-chrome-mymail" alt="FlowCrypt logo" title="PGP Encryption for Gmail" src="./images/logo_flowcrypt.jpg">
-        <span>FlowCrypt</span>
-      </a>
-      <a href="https://chrome.google.com/webstore/detail/mymail-crypt-for-gmail/jcaobjhdnlpmopmjhijplpjhlplfkhba" title="Google Chrome Extension Mymail-Crypt" target="_blank">
-        <img class="logo" id="logo-chrome-mymail" alt="Mymail-Crypt logo" title="Google Chrome Extension Mymail-Crypt" src="./images/logo_mymail_crypt.jpg">
-        <span>Mymail-Crypt</span>
-      </a>
-      <a href="https://www.openudc.org/" title="Universal Digital Currencies" target="_blank">
-        <img class="logo" id="logo-udc" alt="udc logo" title="Universal Digital Currencies" src="./images/logo_openudc.png">
-        <span>UDC</span>
-      </a>
-      <a href="https://encrypt.to" title="Encrypt To" target="_blank">
-        <img class="logo" id="logo-encrypto" alt="encrypto logo" title="encrypt.to uses OpenPGP.js to encrypt messages and send via Rails backend" src="./images/logo_encrypto.png">
-        <span>Encrypt.to</span>
-      </a>
-      <a href="https://chrome.google.com/webstore/detail/pgp-anywhere/cdlcdnmhcodhagbmljapgbjdimjckilb" title="PGP Anywhere" target="_blank">
-        <img class="logo" id="logo-pgpanywhere" alt="PGP Anywhere" title="Encrypt and decrypt PGP on the go" src="./images/logo_pgpanywhere.png">
-        <span>PGP Anywhere</span>
-      </a>
-      <a href="https://www.passbolt.com" title="Passbolt" target="_blank">
-        <img class="logo" id="logo-passbolt" alt="Passbolt logo" title="Open source password manager for teams" src="./images/logo_passbolt.png">
-        <span>passbolt</span>
-      </a>
-    </div>
-  </section>
-
-  <section class="block">
-    <h2>Architecture</h2>
-    <p><img style="width:90%; max-width:70em;" src="images/overview.png" alt="OpenPGP.js overview" /></p>
-  </section>
-</body>
+              <a
+                href="https://chromewebstore.google.com/detail/pgp-anywhere/cdlcdnmhcodhagbmljapgbjdimjckilb"
+                class="user-link"
+                title="PGP Anywhere"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="img/logo_pgpanywhere.png"
+                  title="Encrypt and decrypt PGP on the go"
+                  alt="PGP Anywhere logo"
+                  width="64"
+                  height="64"
+                />
+                <p>PGP Anywhere</p>
+              </a>
+              <a
+                href="https://www.passbolt.com/"
+                class="user-link"
+                title="Passbolt"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="img/logo_passbolt.png"
+                  title="Open source password manager for teams"
+                  alt="Passbolt logo"
+                  width="64"
+                  height="64"
+                />
+                <p>passbolt</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="resources-section">
+        <div class="container">
+          <div class="resources-content">
+            <div class="contact-grid">
+              <div class="resources-container">
+                <h3 class="resources-title">Resources</h3>
+                <ul class="resources-list">
+                  <li>
+                    <a
+                      href="https://github.com/openpgpjs/openpgpjs"
+                      target="_blank"
+                      rel="noopener"
+                      class="resource-link"
+                      >Source Code</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/openpgpjs/openpgpjs/blob/main/README.md#getting-started"
+                      target="_blank"
+                      rel="noopener"
+                      class="resource-link"
+                      >Getting Started</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/openpgpjs/openpgpjs/issues"
+                      target="_blank"
+                      rel="noopener"
+                      class="resource-link"
+                      >GitHub issues</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/openpgpjs/openpgpjs/wiki"
+                      target="_blank"
+                      rel="noopener"
+                      class="resource-link"
+                      >Wiki</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="security-contact-container">
+                <h3 class="contact-title">Report a Security Issue</h3>
+                <a
+                  href="mailto:security@openpgpjs.org"
+                  class="contact-email contact-email-security"
+                  >security@openpgpjs.org</a
+                >
+                <p class="contact-text">
+                  Please download our
+                  <a
+                    href="https://openpgpjs.org/.well-known/openpgpkey/hu/t5s8ztdbon8yzntexy6oz5y48etqsnbb"
+                    class="default-link"
+                    >PGP key</a
+                  >, either manually or using
+                  <a
+                    href="https://wiki.gnupg.org/WKD"
+                    class="default-link"
+                    target="_blank"
+                    >WKD</a
+                  >.
+                </p>
+              </div>
+              <div class="contact-container">
+                <h3 class="contact-title">Contact us</h3>
+                <a
+                  href="mailto:contact@openpgpjs.org"
+                  class="contact-email contact-email-general"
+                  >contact@openpgpjs.org</a
+                >
+                <p class="contact-text">
+                  For general inquiries.
+                  <a
+                    href="https://openpgpjs.org/.well-known/openpgpkey/hu/dj3498u4hyyarh35rkjfnghbjxug6b19"
+                    class="default-link"
+                    >PGP key</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <a class="logo-euro">
+            <img
+              src="img/logo_gdpr-eu-white.svg"
+              alt="This project is supported by the Horizon 2020 Framework PRogramme of the European Union"
+              width="300"
+              height="68"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
